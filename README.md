@@ -6,4 +6,4 @@ making calculator that allows only basic arithmatic operations
 takes the input from user (numbers and operator both ) and gives the desired output
 
 ## assignment_02
-converting a value in different units simply(without using if- else
+converting a value in different units without using loops
