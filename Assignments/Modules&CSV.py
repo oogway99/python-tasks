@@ -54,15 +54,22 @@ print ('program finished')
 # Apply at least 4 different filters using if statements.
 # Print only the matching records for each filter.
 
+
+# Read the CSV file
 with open('practice.csv', 'r') as file:
     contains = csv.reader(file)
+    # Print all records
+    print  (contains)
+    # Apply at least 4 different filters using if statements
+    # condition #1
     for row in contains:
         value = row[5]
-        if value == "C" or value == "value": #these strings were not allowing the conversion of value to int type
+        if value == "C" or value == "value": # (these strings were not allowing the conversion of value to int type)
             continue
         value = int (value)
         if value <= 1000:
             print (row)
-
+        # condition #2
         # if "B" in col[1] and "f_50-99" in col[3]:
+        # condition #3
         # if "Electricity, Gas, Water and Waste Services" in col[2] and "2011" in col[0]:
