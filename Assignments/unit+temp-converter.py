@@ -7,7 +7,8 @@ print ("cm to in ", num/2.54)
 print ("m to ft ", num/0.3048)
 print ("ft to m ", num*0.3048)
 print ("miles to km ", num*1.60934)
-print ("km to miles ", num/1.60934)M
+print ("km to miles ", num/1.60934)
+
 # simple conversion  of temp
 x = float (input(" enter the value =") )
 print ("celsius to fahrenheit", (x*(9/5)+32 ))
