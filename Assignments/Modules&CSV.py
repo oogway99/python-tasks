@@ -49,27 +49,57 @@ time.sleep(3)
 print ('program finished')
 
 ## part D
-# Read the CSV file.
-# Print all records.
-# Apply at least 4 different filters using if statements.
-# Print only the matching records for each filter.
+# file 1 
 
-
-# Read the CSV file
+# reading practice.csv
 with open('practice.csv', 'r') as file:
-    contains = csv.reader(file)
-    # Print all records
-    print  (contains)
-    # Apply at least 4 different filters using if statements
-    # condition #1
+     contains = csv.reader(file)
+ # print all records
+     for row in contains:
+        print (row)
+
+# applying 4 conditions
+# condition 1
     for row in contains:
+        if "B" in row[1] and "f_50-99" in row[3]:
+            print (row)
+# conditin 2 
+        if "Electricity, Gas, Water and Waste Services" in row[2] and "2011" in row[0]:
+            print (row)
+#  condition 3
         value = row[5]
-        if value == "C" or value == "value": # (these strings were not allowing the conversion of value to int type)
+        if value == "C" or value == "value": #these strings were not allowing the conversion of value to int type
             continue
         value = int (value)
         if value <= 1000:
             print (row)
-        # condition #2
-        # if "B" in col[1] and "f_50-99" in col[3]:
-        # condition #3
-        # if "Electricity, Gas, Water and Waste Services" in col[2] and "2011" in col[0]:
+# condition 4
+        if "Fixed tangible assets" in row[4]:
+            print (row)
+
+## file 2
+
+# reading csv1.csv
+with open('csv1.csv', 'r') as file:
+    contains = csv.reader(file)
+# print all records
+    for row in contains:
+         print (row)
+
+# applying 4 conditions
+# condition 1
+        if "REVISED" in row[4]:
+            print (row)
+# conditin 2 
+        if "2023.03" in row[0] and "REVISED" in row[4]:
+            print (row)
+#  condition 3
+        value = row[2]
+        if value == 'Data_value':
+            continue
+        value = int (value)
+        if value <= 100:
+            print (row)
+# condition 4
+        if "All control" in row[10] and "REVISED" in row[4]:
+            print (row)
