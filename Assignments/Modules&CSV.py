@@ -103,3 +103,30 @@ with open('csv1.csv', 'r') as file:
 # condition 4
         if "All control" in row[10] and "REVISED" in row[4]:
             print (row)
+
+## file 3
+
+# reading csv2.csv
+with open('csv2.csv', 'r') as file:
+    contains = csv.reader(file)
+## print all records
+    for row in contains:
+        print (row)
+
+# applying 4 conditions
+# condition 1
+        if "Agriculture" in row[2]:
+            print (row)
+# conditin 2 
+        if "Agriculture" in row[2] and "Actual" in row[4]:
+            print (row)
+#  condition 3
+        value = row[6]
+        if value == 'Data_value':
+            continue
+        value = int (value)
+        if value <= 100:
+            print (row)
+# condition 4
+        if "ZGZ" in row[1] and "2015.03" in row[0]:
+            print (row)
